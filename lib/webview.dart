@@ -7,12 +7,13 @@ class WebviewClass extends StatefulWidget {
 }
 
 class _WebviewClassState extends State<WebviewClass> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: WebviewScaffold(
-          url: 'https://my-party.fr/',
+          url: 'https://my-party.fr/setmobilecookies',
           withLocalStorage: true,
           initialChild: Container(
             color: Colors.grey[350],
@@ -22,15 +23,6 @@ class _WebviewClassState extends State<WebviewClass> {
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
                   Image.asset('assets/logo.png', width: 100, height: 100),
-                  SizedBox(height:20),
-                  Text(
-                    'My Party',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontFamily: 'CaviarDreams',
-                      fontWeight: FontWeight.w800
-                    ),
-                  )
                 ],
               ),
             ),

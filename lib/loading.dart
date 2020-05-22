@@ -41,36 +41,29 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.grey[350],
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: <Widget>[
-              Image.asset('assets/logo.png', width: 100, height: 100),
-              SizedBox(height:20),
-              Text(
-                'My Party',
-                style: TextStyle(
-                  fontSize: 25,
-                  fontFamily: 'CaviarDreams',
-                  fontWeight: FontWeight.w800
+      body: SafeArea(
+        child: Container(
+          color: Colors.grey[350],
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Image.asset('assets/logo.png', width: 100, height: 100),
+                SizedBox(height:30),
+                Text(
+                  '$status',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontFamily: 'CaviarDreams',
+                    fontWeight: FontWeight.w800
+                  ),
                 ),
-              ),
-              SizedBox(height:10),
-              Text(
-                '$status',
-                style: TextStyle(
-                  fontSize: 12,
-                  fontFamily: 'CaviarDreams',
-                  fontWeight: FontWeight.w800
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
-      ),
+      )
     );
   }
 }
